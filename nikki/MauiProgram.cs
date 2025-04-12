@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
+using nikki.View;
+using nikki.ViewModel;
 
 namespace nikki;
 
@@ -18,7 +20,9 @@ public static class MauiProgram
 #if DEBUG
         builder.Logging.AddDebug();
 #endif
-
+        builder.Services.AddSingleton<MainPage>();
+        builder.Services.AddSingleton<MainPageViewModel>();
+        
         return builder.Build();
     }
 }
