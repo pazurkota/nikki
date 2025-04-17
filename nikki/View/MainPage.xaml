@@ -33,7 +33,7 @@
                         
                         <VerticalStackLayout>
                             <Label Text="{Binding Text}" FontSize="16"/>
-                            <Label Text="{Binding CreatedAt, StringFormat='Added: {0:dd.MM.yyyy HH:mm}'}"
+                            <Label Text="{Binding Created, StringFormat='Added: {0:dd.MM.yyyy HH:mm}'}"
                                    FontSize="12" TextColor="{StaticResource Tertiary}"/>
                         </VerticalStackLayout>
                     </Frame>

@@ -7,7 +7,7 @@
         <VerticalStackLayout Padding="20" Spacing="20">
             <Label Text="Note content:" FontSize="18" FontAttributes="Bold" />
             <Label Text="{Binding Text}" FontSize="16" TextColor="{StaticResource Tertiary}" />
-            <Label Text="{Binding CreatedAt, StringFormat='Added: {0:dd.MM.yyyy HH:mm}'}"
+            <Label Text="{Binding Created, StringFormat='Added: {0:dd.MM.yyyy HH:mm}'}"
                    FontSize="12" TextColor="{StaticResource Black}" HorizontalOptions="End"/>
         </VerticalStackLayout>
     </ContentPage.Content>
