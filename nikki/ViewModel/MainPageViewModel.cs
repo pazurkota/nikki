@@ -6,7 +6,7 @@ using nikki.Model;
 
 namespace nikki.ViewModel;
 
-public partial class MainPageViewModel : ObservableObject
+public partial class MainPageViewModel(Action<Note> navigateToDetails) : ObservableObject
 {
     public ObservableCollection<Note> Notes { get; } = new();
     
@@ -19,6 +19,15 @@ public partial class MainPageViewModel : ObservableObject
         {
             Notes.Add(new Note { Text = NoteText});
             NoteText = string.Empty;
+        }
+    }
+    
+    [RelayCommand]
+    private void NoteSelected(Note? note)
+    {
+        if (note is not null)
+        {
+            navigateToDetails.Invoke(note);
         }
     }
 }
